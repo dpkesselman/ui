@@ -173,7 +173,7 @@ MonoBehaviour:
   projectileRb: {fileID: 2881744062081717427}
   speed: 3
   projectileLife: 1
-  projectileCount: 1
+  projectileCount: 0.3
 --- !u!1 &8692791048355246477
 GameObject:
   m_ObjectHideFlags: 0
