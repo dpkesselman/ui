@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
     float moveX;
     private bool flippedLeft;
     public bool facingRight;
+    private HP hp;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();      
         facingRight = true; 
+        hp = GetComponent<HP>();
     }
 
     void Update()

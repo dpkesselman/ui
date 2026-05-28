@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
-    [SerializeField] private float HPAmount;
+    [SerializeField] public float HPAmount;
     [SerializeField] private float MaxHP;
     [SerializeField] private HPBar hpbar;
 
@@ -17,6 +17,12 @@ public class HP : MonoBehaviour
     public void TakeDamage(int damage)
     {
         HPAmount -= damage;
+        HPBar.Instance.ChangeCurrentHP(HPAmount);
+    }
+
+    public void Heal(int damage)
+    {
+        HPAmount += damage;
         HPBar.Instance.ChangeCurrentHP(HPAmount);
     }
 }
