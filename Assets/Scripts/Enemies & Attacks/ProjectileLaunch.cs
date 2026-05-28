@@ -4,9 +4,8 @@ public class ProjectileLaunch : MonoBehaviour
 {
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform launchPoint;
-    [SerializeField] private float shootTime; // enfriamiento entre proyectiles
-    [SerializeField] private float shootCounter; // temporizador de enfriamiento
-
+    [SerializeField] private float shootTime; // tiempo de disparo
+    [SerializeField] private float shootCounter; // contador de disparos
 
     void Start()
     {
@@ -27,7 +26,7 @@ public class ProjectileLaunch : MonoBehaviour
         }        
 
 
-        shootCounter -= Time.deltaTime; // Hace que el enfriamiento cuente hacia abajo
+        shootCounter -= Time.deltaTime; //marca el conteo hacia abajo
     }
 }
 

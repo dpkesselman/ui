@@ -1,0 +1,15 @@
+using UnityEngine;
+
+
+public class AddPoints : MonoBehaviour
+{
+    public int pointsToAdd;
+
+     void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            PointSytem.Instance.AddingPoints(pointsToAdd);
+        }
+    }
+}
